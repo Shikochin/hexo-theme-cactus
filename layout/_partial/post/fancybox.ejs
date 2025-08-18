@@ -1,0 +1,22 @@
+<!-- Fancybox -->
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.content img').forEach((img) => {
+            if (img.parentNode.tagName === 'A') {
+                img.parentNode.setAttribute('data-fancybox', 'gallery')
+            } else {
+                const link = document.createElement('a')
+                link.href = img.src
+                link.setAttribute('data-fancybox', 'gallery')
+                img.parentNode.insertBefore(link, img)
+                link.appendChild(img)
+            }
+        })
+    })
+</script>
