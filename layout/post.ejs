@@ -24,8 +24,13 @@
         </div>
     </header>
     <%- partial('_partial/post/gallery') %>
+
     <div class="content e-content" itemprop="articleBody">
-        <%- page.content %>
+        <% if (page.summary) { %>
+        <div class="article-summary">
+            <p><%= page.summary %></p>
+        </div>
+        <% } %> <%- page.content %>
     </div>
 </article>
 <%- partial('_partial/comments') %> <%- partial('_partial/post/fancybox') %>
