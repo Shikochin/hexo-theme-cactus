@@ -132,3 +132,19 @@
       }());
   </script>
 <% } %>
+<!-- giscus Comments -->
+<% if (page.comments && theme.giscus.enabled) { %>
+<script
+    src="https://giscus.app/client.js"
+    data-repo="<%= theme.giscus.repo %>"
+    data-repo-id="<%= theme.giscus.repo_id %>"
+    data-category="<%= theme.giscus.category %>"
+    data-category-id="<%= theme.giscus.category_id %>"
+    data-mapping="<%= theme.giscus.mapping %>"
+    data-theme="<%= theme.giscus.theme %>"
+    data-lang="<%= theme.giscus.lang %>"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+></script>
+<% } %>
