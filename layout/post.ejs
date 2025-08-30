@@ -26,7 +26,7 @@
     <%- partial('_partial/post/gallery') %>
 
     <div class="content e-content" itemprop="articleBody">
-        <% if (page.summary) { %>
+        <% if (page.summary && page.summary !== "none") { %>
         <div class="article-summary">
             <p><%= page.summary %></p>
         </div>
